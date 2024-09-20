@@ -1,0 +1,264 @@
+/* HEADER STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #000000;
+    color: #ff0000;
+}
+
+/* Apply dark mode to all sections */
+.dark-mode header,
+.dark-mode .hero,
+.dark-mode .about-snippet,
+.dark-mode .testimonials-section,
+.dark-mode .cta-section,
+.dark-mode footer {
+    background-color: #000000;
+    color: #ffff00;
+}
+
+/* Modify dark mode for buttons and links */
+.dark-mode .btn {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode .btn:hover {
+    background-color: #555;
+}
+
+.dark-mode a {
+    color: #ffffff;
+}
+
+.dark-mode a:hover {
+    color: #ffea00;
+}
+
+/* Sidebar for dark mode */
+.dark-mode .sidebar {
+    background-color: #333;
+}
+
+.dark-mode .sidebar-nav a {
+    color: #ffffff;
+}
+
+.dark-mode .sidebar-social-media a {
+    color: #ffffff;
+}
+
+/* Dark Mode Footer */
+.dark-mode footer {
+    background-color: #333;
+}
+
+/* Fixed Toggle Position */
+.theme-toggle {
+    position: fixed;
+    top: 80px; /* Adjust this value to place it right after the navbar */
+    right: 20px;
+    z-index: 1000;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#113602;
+    position: relative;
+}
+
+/* Flex container for logo and nav */
+.logo-nav-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 5vh;
+}
+
+.company-name {
+    margin-left: 10px;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-family: bolder;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+/* Navigation Styles */
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the nav links */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    color: rgb(255, 221, 0);
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    margin-left: auto;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-media-icons i {
+    transition: color 0.3s;
+}
+
+.fa-facebook-f { color: blue; }
+.fa-twitter { color: rgb(0, 0, 0); }
+.fa-instagram { color: rgb(255, 247, 0); }
+.fa-youtube { color: rgb(255, 0, 0); }
+
+.social-media-icons a:hover i {
+    color: #fbff00;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color:#113602;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    font-size: 2em;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin: 20px 0;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sidebar-nav a:hover{
+    color: #fbff00;
+}
+
+.sidebar-social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sidebar-social-media a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .social-media-icons {
+        display: none;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+    }
+}
